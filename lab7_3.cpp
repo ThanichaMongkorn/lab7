@@ -3,7 +3,8 @@
 
 int adiff(int A,int B){
     int c;
-    c= Abs(A-B);
+    c= abs(A-B);
+    c=c%360;
     if(c>180){
     c=360-c;
     return c;
