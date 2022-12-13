@@ -33,9 +33,25 @@ string func3(string x){
 	return y;	
 }
 
+string func4(string x){
+    int i=1,L=x.size();
+    string y = func2(x);
+    while (i<L){
+        if (y[i]==y[L-i-1]){
+            i++;    
+        }else{
+            return "No";
+        }
+    }
+    return "Yes";
+}
+
 int main(){
-    cout >> "Input text: "
-    cout >> "Reversed text: "
-    cout >> "Palindrome: "
+    string a;
+    
+    cout << "Input text: ";
+    cin >> a;
+    cout << "Reversed text: "<<func1(a)<<"\n";
+    cout << "Palindrome: "<<func4(a);
     return 0;
 }
